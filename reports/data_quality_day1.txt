@@ -1,0 +1,7 @@
+DATA QUALITY SUMMARY - DAY 1
+========================================
+Total codes in fund_master : 40
+Matched in nav_history     : 40
+Missing codes              : 0
+
+NOTE: 04_monthly_sip_inflows.csv has 12 null values in yoy_growth_pct (expected — first year has no YoY data)
