@@ -14,7 +14,7 @@ nav = nav[nav['nav'] > 0]
 nav = nav.sort_values(['amfi_code', 'date']).reset_index(drop=True)
 
 # Forward-fill missing NAV for holidays/weekends
-nav = nav.set_index('date').groupby('amfi_code').resample('D').ffill().drop(columns='amfi_code').reset_index()
+nav = nav.set_index('date').groupby('amfi_code').resample('D').ffill().reset_index()
 
 nav.to_csv("data/processed/nav_history_clean.csv", index=False)
 print(f"  ✅ Saved → data/processed/nav_history_clean.csv ({len(nav)} rows)")
